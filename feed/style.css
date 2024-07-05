@@ -1,0 +1,56 @@
+.contaier{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    align-items: center;
+    padding-top: 300px; 
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+}
+
+.pou{
+    width: 100px;
+    transition: all .5s ease-in-out;
+    font-family: sans-serif;
+}
+
+.eat{
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.food{
+    width: 14px;
+    height: 14px;
+    background-color: #f45c43;
+    border-radius: 100%;
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+}
+
+.food.show{
+    animation: food 1.5s ease-in-out;
+}
+
+@keyframes food{
+    0% {
+        opacity: 1;
+        top: -100%;
+        transform: scale(1);
+    }
+    100% {
+        top: 50%;
+        transform: scale(.5);
+        opacity: .8;
+    }
+}
