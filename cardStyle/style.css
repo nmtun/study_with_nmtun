@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500);
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 96px;
+  font-size: 21px;
+  background: #fff;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+section.card {
+  background: #000046;
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046); 
+  background: linear-gradient(to right, #1CB5E0, #000046);
+  border-radius: 24px 24px 24px 48px;
+  padding: 48px 48px 48px 308px;
+  margin: 84px 0;
+  min-width: 640px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  position: relative;
+  box-shadow: 5px 0 0 0 rgba(204,204,204,0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
+}
+section.card .text-content {
+  display: flex;
+  flex-direction: column;
+  width:calc(60vw - 192px);
+}
+section.card .text-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  max-width: 20ch;
+  color: #fff;
+}
+section.card .text-content p {
+  margin: 25px 0 24px;
+  color: #fff;
+}
+section.card .text-content a {
+  border: 3px solid #f2f2f2;
+  color: #ffffff;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: 400ms all;
+}
+section.card .text-content a:hover {
+  background: #051c5e;
+  color: white;
+}
+section.card .visual {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: -24px;
+  left: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+section.card .visual img {
+  height: 110%;
+}
+article {
+  margin: auto;
+  display: block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
+}
+@media all and (max-width: 1100px) {
+  body {
+    padding: 96px 48px 24px;
+  }
+  article {
+    width: 100%;
+    min-width: 100%;
+  }
+  section.card {
+    min-width: 100%;
+  }
+  section.card .text-content {
+    width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  body {
+    padding: 48px 24px 0;
+  }
+  section.card {
+    margin: 64px 0;
+    padding: 88px 36px 36px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+  section.card .text-content h3 {
+    max-width:calc(100% - 150px);
+    font-size: 1em;
+  }
+  section.card .text-content p,
+  section.card .text-content a {
+    font-size: 0.8em;
+  }
+  section.card .visual {
+    width: 150px;
+    height: 150px;
+    right: 16px;
+    left: auto;
+    border-radius: 50%;
+  }
+  section.card .visual img{
+    width: 100%;
+    height: auto;
+    }
+}
