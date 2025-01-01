@@ -46,9 +46,7 @@ left.addEventListener('click', function() {
 right.addEventListener('click', function() {
     if(current < character.length - 1){
         current++
-
-    } else {
-        current = 0
+        setPlayer()
     }
     setPlayer()
 }) 
