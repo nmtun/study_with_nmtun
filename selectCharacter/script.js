@@ -46,8 +46,11 @@ left.addEventListener('click', function() {
 right.addEventListener('click', function() {
     if(current < character.length - 1){
         current++
-        setPlayer()
+
+    } else {
+        current = 0
     }
+    setPlayer()
 }) 
 
 function showMessage(msg) {

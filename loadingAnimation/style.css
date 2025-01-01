@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-btn{
+    position: sticky;
+    padding: 14px 30px;
+    background-color: aqua;
+    color: #fff;
+    font-weight:600;
+    border: none;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+}
+
+.order-btn.loading{
+    padding: 2px 20px;
+    height: 2px;
+}
+
+.plane-card{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: sticky;
+}
+
+.plane{
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.plane.play{
+    top: 0;
+    opacity: 1;
+    animation: plane 3s ease-in-out;
+}
+
+@keyframes plane{
+    0% {
+        left: 0;
+    }
+    40% {
+        left: 20%;
+    }
+    60% {
+        left: 10%;
+    }
+    100% {
+        top: 0;
+        left: 100%;
+    }
+}
